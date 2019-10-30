@@ -35,7 +35,7 @@ This diagram elaborates the components of the FRIL IDE
 * FRIL Help/Support
 * Query Visualization (A visualization tool for debugging where the query that is being run will be displayed using a tree)
 
-![Alt text](images/Diagram2.jpg?raw=true "Diagram1")
+![Alt text](images/Diagram1.jpg?raw=true "Diagram1")
 
 ### Design D2: a further elaboration on D1, giving the most details concerning your system.
 This diagram elaborates on specific features for the components:
