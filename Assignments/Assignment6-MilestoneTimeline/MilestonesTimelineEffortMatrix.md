@@ -7,31 +7,27 @@
     Our first milestone is understanding concepts of AI and logic programming, learning more about the applications of FRIL, the users of our IDE, and the importance of logic programming in the industry. We want to scope out all the pre-requisite information we need for the design and our goals, so we can create a product which suits the needs and desires of our stakeholders.
 
 
-2. **Decide on project set-up and team practices**
+2. **Decide on project set-up and team practices and groundwork for FRIL IDE**
 
     Our next milestone is to decide upon our team practices and the set-up of our repository (including figuring out whether we can publish the source code of FRIL online).
 
-3. **Groundwork for FRIL IDE**
-
-    This milestone is about finalizing the UI design and creating the outline of the basic components of the project (including the text editor, the panels, the interpreter, etc).
-
-4. **Develop text editor features**
+3. **Develop text editor features**
 
     This milestone is about creating a minimum viable text editor and implementing features of the text editor like syntax highlighting, line numbers, and rainbow parentheses.
 
-5. **Embed FRIL interpreter in IDE**
+4. **Embed FRIL interpreter in IDE**
 
     This milestone is about creating and completing all the necessary integrations of FRIL with the IDE, finalizing the console, and creating functionality for interaction with the FRIL source code.
 
-6. **Incorporate FRIL help features**
+5. **Incorporate FRIL help features**
 
     We want to provide people with all the necessary resources to use the IDE and use the power of FRIL. This milestone is about creating and publishing those resources as well as creating visual interactive components to help users better understand how queries work in FRIL and debug their program.
 
-7. **Create settings for adjusting UI theme**
+6. **Create settings for adjusting UI theme**
 
     Our next milestone is to enable adjustments to the UI themes and settings to improve the accessibility of our UI. We will be considering accessibility throughout the project development stage but want to use this milestone to specifically improve on those aspects. This milestone also includes the creation of a lecture mode button for professors to quickly and easily change the UI settings to a more projector friendly view.
 
-8. **Final Touch ups**
+7. **Final Touch ups**
 
 	Our final milestone is to make all the refinements and touches to our project to make it ready for an initial release.
 
