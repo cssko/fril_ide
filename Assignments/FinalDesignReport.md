@@ -46,7 +46,7 @@ We met 3-6 hours every week of the semester during senior design time or made up
 * We did more research on logic programming and the educational outcomes we would like for the IDE.	
 * We compiled the artificial intelligence course material.
 * We decided and implemented project set-up and team practices including contribution guidelines for our open source project.
-* We decided on our IDE name and logo.
+* We decided on our IDE name and and have created logo designs for the project.
 * We also have a basic Qt project for the IDE ready which we will be uploading to this repository soon. 
 
 
