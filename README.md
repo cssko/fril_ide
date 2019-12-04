@@ -6,19 +6,15 @@ BeautiFRIL is an IDE for the FRIL language for a University of Cincinnati senior
 ### What is FRIL?
 FRIL (Fuzzy Relational Inference Language) is a logic programming language from the 1980's. It is similar to Prolog in use but has a syntax like Lisp.
 
-## Members
+### Members
 * Chris Kothman (kothmacr@mail.uc.edu)
 * Vaishnavi Raghavaraju (raghavvi@mail.uc.edu)
 * Saylee Dharne (dharnesk@mail.uc.edu)
 
-## Advisor
+### Advisor
 * Dr Anca Ralescu (ralescal@ucmail.uc.edu)
 
-### [Project Description](Assignments\Assignment2-ProjectDescription)
-
-### [Design Diagrams](Assignments\Assignment4-DesignDiagrams\Assignment4-DesignDiagrams.md)
-
-### [Milestones, Timeline and Effort Matrix](Assignments\Assignment6-MilestoneTimeline\MilestonesTimelineEffortMatrix.md)
+## [Final Design Report](Assignments\FinalDesignReport.md)
 
 ## Project Status
 Work in progress. 
