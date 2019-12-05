@@ -15,8 +15,8 @@ Logic programming is a programming paradigm for expressing and using formal logi
 ## [User Stories and Design Diagrams](Assignment4-DesignDiagrams/Assignment4-DesignDiagrams.md)
 
 ## Project Tasks and Timeline
-### [Task List](Assignments/Assignment5-TaskList/tasklist.md)
-### [Milestones, Timeline, and Effort Matrix](Assignments/Assignment6-MilestoneTimeline/MilestonesTimelineEffortMatrix.md)
+### [Task List](Assignment5-TaskList/tasklist.md)
+### [Milestones, Timeline, and Effort Matrix](Assignment6-MilestoneTimeline/MilestonesTimelineEffortMatrix.md)
 
 ## [Power Point Slideshow](https://youtu.be/Vf60piWtOHw)
 
