@@ -10,26 +10,26 @@ Logic programming is a programming paradigm for expressing and using formal logi
 
 **Advisor:** Dr Anca Ralescu
 
-## [Project Description](Assignment2-ProjectDescription\Project-Description.md)
+## [Project Description](Assignment2-ProjectDescription/Project-Description.md)
 
-## [User Stories and Design Diagrams](Assignment4-DesignDiagrams\Assignment4-DesignDiagrams.md)
+## [User Stories and Design Diagrams](Assignment4-DesignDiagrams/Assignment4-DesignDiagrams.md)
 
 ## Project Tasks and Timeline
-### [Task List](Assignments\Assignment5-TaskList\tasklist.md)
-### [Milestones, Timeline, and Effort Matrix](Assignments\Assignment6-MilestoneTimeline\MilestonesTimelineEffortMatrix.md)
+### [Task List](Assignments/Assignment5-TaskList/tasklist.md)
+### [Milestones, Timeline, and Effort Matrix](Assignments/Assignment6-MilestoneTimeline/MilestonesTimelineEffortMatrix.md)
 
 ## [Power Point Slideshow](https://youtu.be/Vf60piWtOHw)
 
 ## Self Assessment Essays
-* ### [Saylee Dharne](Assignment3-IndividualCapstoneAssessment\Assignment3-SayleeDharne.md)
+* ### [Saylee Dharne](Assignment3-IndividualCapstoneAssessment/Assignment3-SayleeDharne.md)
 * ### Chris Kothman
-* ### [Vaishnavi Raghavaraju](Assignment3-IndividualCapstoneAssessment\Assignment3-VaishnaviRaghavaraju.md)
+* ### [Vaishnavi Raghavaraju](Assignment3-IndividualCapstoneAssessment/Assignment3-VaishnaviRaghavaraju.md)
 
 ## Professional Biographies
 
-* ### [Saylee Dharne](Assignment1-Biographies\Saylee_Dharne.md)
-* ### [Chris Kothman](Assignment1-Biographies\Chris_Kothman.md)
-* ### [Vaishnavi Raghavaraju](Assignment1-Biographies\Vaishnavi_Raghavaraju.md)
+* ### [Saylee Dharne](Assignment1-Biographies/Saylee_Dharne.md)
+* ### [Chris Kothman](Assignment1-Biographies/Chris_Kothman.md)
+* ### [Vaishnavi Raghavaraju](Assignment1-Biographies/Vaishnavi_Raghavaraju.md)
 
 
 ## Budget
