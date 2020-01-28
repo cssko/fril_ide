@@ -1,0 +1,6 @@
+<RCC>
+    <qresource>
+        <file>resources/bip_list.txt</file>
+		<file>resources/fonts/DejaVuSansMono.ttf</file>
+    </qresource>
+</RCC>
