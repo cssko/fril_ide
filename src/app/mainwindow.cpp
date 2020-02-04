@@ -87,7 +87,7 @@ void MainWindow::setupDockWidgets() {
   fileTreeView->setModel(model);
   fileTreeView->setRootIndex(indexPath);
   // TODO: We want the ./.. options to go
-  // up a directory and whatnot.
+  // up a directory and whatnot. - Do we actually?
   // Will want some kind of File->open directory too probably.
   //  fileTreeView->scrollTo(indexPath);
   fileTreeView->setAnimated(false);
