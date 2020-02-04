@@ -51,7 +51,7 @@ void MainWindow::setupEditor() {
   QFont font;
   font.setFamily("DejaVu Sans Mono");
   font.setFixedPitch(true);
-  font.setPointSize(12);
+  font.setPointSize(14);
 
   // TODO: The autocomplete doesn't really work.
   editor = new Editor;
@@ -80,7 +80,7 @@ void MainWindow::setupDockWidgets() {
 
   QFileSystemModel *model = new QFileSystemModel;
   model->setRootPath(QDir::currentPath());
-  model->setFilter(QDir::AllEntries | QDir::AllDirs);
+  model->setFilter(QDir::AllEntries | QDir::AllDirs | QDir::NoDotAndDotDot);
   QModelIndex indexPath = model->index(QDir::currentPath());
   QTreeView *fileTreeView = new QTreeView;
 
