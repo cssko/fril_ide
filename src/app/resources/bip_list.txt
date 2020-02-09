@@ -182,7 +182,3 @@ wsc
 wspaces
 wsv
 tq
-?
-!
-_
-\\|
