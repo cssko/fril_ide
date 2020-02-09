@@ -3,11 +3,12 @@
 
 #include "editor.h"
 #include "highlighter.h"
+#include <QListWidget>
 #include <QMainWindow>
+#include <QStackedLayout>
 
 // TODO: Why do we bother forward declaring these
 QT_FORWARD_DECLARE_CLASS(QMenu)
-// QT_FORWARD_DECLARE_CLASS(QTextEdit)
 QT_FORWARD_DECLARE_CLASS(QTreeView)
 
 class MainWindow : public QMainWindow {
@@ -23,8 +24,10 @@ public slots:
   void openFile(const QString &path = QString());
 
 private:
-  // Not sure if we want to do the editor business here, as we may end up having
-  // tabbed editors
+  QListWidget prefList;
+  QStackedLayout prefLayout;
+  // Not sure if we want to do the editor business here, as we may end up
+  // having tabbed editors
   void setupEditor();
   void setupDockWidgets();
   void setupFileMenu();

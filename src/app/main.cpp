@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
   QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
   QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
   QApplication app(argc, argv);
-  // TODO: Agree to how we want to handling versioning.
+  // TODO: Agree on how we want to handle versioning.
   QCoreApplication::setOrganizationName("BeautiFRIL Team");
   QCoreApplication::setApplicationName("BeautiFRIL");
   QCoreApplication::setApplicationVersion(BEAUTIFRIL_VERSION_STR);

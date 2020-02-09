@@ -11,13 +11,14 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   // TODO: this is going to set off deprecation warnings and should maybe also
   // be in a function.
-  QSize availableSize = qApp->desktop()->availableGeometry().size();
+  QSize availableSize = QGuiApplication::primaryScreen()->size();
   int width = availableSize.width() * 0.75;
   int height = availableSize.height() * 0.75;
   QSize newSize(width, height);
 
-  setGeometry(QStyle::alignedRect(Qt::LeftToRight, Qt::AlignCenter, newSize,
-                                  qApp->desktop()->availableGeometry()));
+  setGeometry(QStyle::alignedRect(
+      Qt::LeftToRight, Qt::AlignCenter, newSize,
+      QGuiApplication::primaryScreen()->availableGeometry()));
   this->setupFileMenu();
   this->setupHelpMenu();
   this->setupEditor();
