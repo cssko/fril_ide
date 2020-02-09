@@ -53,7 +53,6 @@ void MainWindow::setupEditor() {
   font.setFixedPitch(true);
   font.setPointSize(14);
 
-  // TODO: The autocomplete doesn't really work.
   editor = new Editor;
   completer = new QCompleter(this);
   completer->setModel(this->modelFromFile(":/resources/bip_list.txt"));

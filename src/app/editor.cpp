@@ -75,20 +75,18 @@ void Editor::keyPressEvent(QKeyEvent *e) {
                            e->key() == Qt::Key_E); // CTRL+E
   if (!c || !isShortcut) // do not process the shortcut when we have a completer
     QTextEdit::keyPressEvent(e);
-  //! [7]
 
-  //! [8]
   const bool ctrlOrShift = e->modifiers().testFlag(Qt::ControlModifier) ||
                            e->modifiers().testFlag(Qt::ShiftModifier);
-  if (!c || (ctrlOrShift && e->text().isEmpty()))
+  if (!c || (ctrlOrShift && e->text().isEmpty())) {
     return;
-
-  static QString eow("~!@#$%^&*_+{}|:\"<>?,./;'[]\\-="); // end of word
+  }
+  //  static QString eow("~!@#$%^&*_+{}|:\"<>?,./;'[]\\-="); // end of word
+  static QString eow("()|");
   const bool hasModifier = (e->modifiers() != Qt::NoModifier) && !ctrlOrShift;
   QString completionPrefix = textUnderCursor();
-
   if (!isShortcut &&
-      (hasModifier || e->text().isEmpty() || completionPrefix.length() < 3 ||
+      (hasModifier || e->text().isEmpty() || completionPrefix.length() < 2 ||
        eow.contains(e->text().right(1)))) {
     c->popup()->hide();
     return;
@@ -98,8 +96,9 @@ void Editor::keyPressEvent(QKeyEvent *e) {
     c->setCompletionPrefix(completionPrefix);
     c->popup()->setCurrentIndex(c->completionModel()->index(0, 0));
   }
+
   QRect cr = cursorRect();
   cr.setWidth(c->popup()->sizeHintForColumn(0) +
               c->popup()->verticalScrollBar()->sizeHint().width());
-  c->complete(cr); // popup it up!
+  c->complete(cr);
 }
