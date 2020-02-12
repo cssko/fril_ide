@@ -41,6 +41,8 @@ else()
     editor.h
     highlighter.cpp
     highlighter.h
+    settingsdialog.cpp
+    settingsdialog.h
     resources.qrc
   )
 endif()
