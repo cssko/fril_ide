@@ -22,7 +22,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   this->setupFileMenu();
   this->setupHelpMenu();
   this->setupEditor();
-  this->setCentralWidget(this->editor);
+  this->setupEditorTabs();
+  this->setCentralWidget(this->tabWidget);
   this->setWindowTitle(tr("BeautiFRIL"));
   this->setupDockWidgets();
 }
@@ -33,7 +34,12 @@ void MainWindow::about() {
                         "of Mankinds hubris. </p>"));
 }
 
-void MainWindow::newFile() { editor->clear(); }
+void MainWindow::newFile() {
+    int numTabs = tabWidget->count();
+    tabWidget->addTab(this->editor, tr("New File"));
+    tabWidget->setCurrentIndex(numTabs);
+    editor->clear();
+}
 
 void MainWindow::openFile(const QString &path) {
   QString fileName = path;
@@ -41,10 +47,19 @@ void MainWindow::openFile(const QString &path) {
     fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "",
                                             "Fril Files (*.frl *.frm)");
   if (!fileName.isEmpty()) {
+    tabWidget->addTab(this->editor, tr(fileName.toStdString().c_str()));
     QFile file(fileName);
     if (file.open(QFile::ReadOnly | QFile::Text))
       editor->setPlainText(file.readAll());
   }
+}
+
+void::MainWindow::setupEditorTabs() {
+    // Maybe we should move the TabWidget into its own class
+    // The class could potentially handle opening new files,
+    // closing and saving tabs, and generating editors for each tab
+    tabWidget = new QTabWidget;
+    tabWidget->addTab(this->editor, tr("New File"));
 }
 
 void MainWindow::setupEditor() {

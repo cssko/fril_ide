@@ -29,6 +29,7 @@ private:
   // Not sure if we want to do the editor business here, as we may end up
   // having tabbed editors
   void setupEditor();
+  void setupEditorTabs();
   void setupDockWidgets();
   void setupFileMenu();
   void setupHelpMenu();
@@ -37,6 +38,7 @@ private:
 
   QCompleter *completer = nullptr;
   Editor *editor;
+  QTabWidget *tabWidget;
   Highlighter *highlighter;
   QMenu *mainWindowMenu;
   QTreeView *fileTreeView;
