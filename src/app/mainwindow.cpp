@@ -21,9 +21,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
       QGuiApplication::primaryScreen()->availableGeometry()));
   this->setupFileMenu();
   this->setupHelpMenu();
-  this->setupEditor();
-  this->setupEditorTabs();
-  this->setCentralWidget(this->tabWidget);
+  this->setupEditorTabManager();
+  this->setCentralWidget(this->editorTabManager);
   this->setWindowTitle(tr("BeautiFRIL"));
   this->setupDockWidgets();
 }
@@ -35,10 +34,15 @@ void MainWindow::about() {
 }
 
 void MainWindow::newFile() {
-    int numTabs = tabWidget->count();
-    tabWidget->addTab(this->editor, tr("New File"));
-    tabWidget->setCurrentIndex(numTabs);
-    editor->clear();
+    //TODO: Add support for creating multiple new files
+    // Get current directory
+    // QFileSystemModel* model = qobject_cast<QFileSystemModel *>(fileTreeView->model());
+    // QDir dir = model->rootDirectory();
+    QString path("NewFile.frl");
+    QFile file(path);
+    file.open(QFile::WriteOnly | QFile::Text);
+    file.close();
+    editorTabManager->newTab(path, "");
 }
 
 void MainWindow::openFile(const QString &path) {
@@ -47,40 +51,17 @@ void MainWindow::openFile(const QString &path) {
     fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "",
                                             "Fril Files (*.frl *.frm)");
   if (!fileName.isEmpty()) {
-    tabWidget->addTab(this->editor, tr(fileName.toStdString().c_str()));
     QFile file(fileName);
     if (file.open(QFile::ReadOnly | QFile::Text))
-      editor->setPlainText(file.readAll());
+      editorTabManager->newTab(fileName, file.readAll());
   }
 }
 
-void::MainWindow::setupEditorTabs() {
-    // Maybe we should move the TabWidget into its own class
-    // The class could potentially handle opening new files,
-    // closing and saving tabs, and generating editors for each tab
-    tabWidget = new QTabWidget;
-    tabWidget->addTab(this->editor, tr("New File"));
-}
-
-void MainWindow::setupEditor() {
-  QFontDatabase::addApplicationFont(":/resources/fonts/DejaVuSansMono.ttf");
-  QFont font;
-  font.setFamily("DejaVu Sans Mono");
-  font.setFixedPitch(true);
-  font.setPointSize(14);
-
-  editor = new Editor;
-  completer = new QCompleter(this);
-  completer->setModel(this->modelFromFile(":/resources/bip_list.txt"));
-  completer->setModelSorting(QCompleter::CaseInsensitivelySortedModel);
-  completer->setCaseSensitivity(Qt::CaseInsensitive);
-  completer->setWrapAround(false);
-  editor->setCompleter(completer); //  editor->setAcceptRichText(false);
-  editor->setFont(font);
-  editor->setStyleSheet(
-      "QTextEdit { background-color: #333333; color: white; }");
-  editor->setTabStopDistance(20); // half size
-  highlighter = new Highlighter(editor->document());
+void::MainWindow::setupEditorTabManager() {
+    //Create a default new file
+    // Add tab for default file
+    editorTabManager = new EditorTabManager();
+    newFile();
 }
 
 void MainWindow::setupDockWidgets() {

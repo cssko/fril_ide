@@ -39,6 +39,8 @@ else()
     mainwindow.h
     editor.cpp
     editor.h
+    editortabmanager.cpp
+    editortabmanager.h
     highlighter.cpp
     highlighter.h
     resources.qrc
