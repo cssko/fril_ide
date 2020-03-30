@@ -14,9 +14,9 @@ public:
   ~EditorTabManager();
 
 public slots:
-  void setupEditorTabManager();
   void newTab(QString fileName, QString fileText);
   void newEditor();
+  void closeTab(int tabID);
 
 private:
   Editor *editor;

@@ -1,20 +1,33 @@
 #include "editortabmanager.h"
 
-EditorTabManager::EditorTabManager(QWidget *parent) : QTabWidget(parent) {}
+EditorTabManager::EditorTabManager(QWidget *parent) : QTabWidget(parent) {
+    this->setTabsClosable(true);
+    connect(this, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
+}
+
 EditorTabManager::~EditorTabManager(){};
 
-
-void EditorTabManager::setupEditorTabManager(){
+void EditorTabManager::closeTab(int tabID){
+    // Close tab if it's not the only tab open
+    if (this->count() !=1 ){
+        this->removeTab(tabID);
+    }
 }
 
 void EditorTabManager::newTab(QString fileName, QString fileText){
+    // Create new editor
     newEditor();
+
+    // Add a tab with that editor
     this->addTab(this->editor, tr(fileName.toStdString().c_str()));
+
+    // Set editor text to that of its corresponding file
     editor->setPlainText(fileText);
 }
 
 // Set up a new editor
 void EditorTabManager::newEditor() {
+  // Initialize a new editor
   QFontDatabase::addApplicationFont(":/resources/fonts/DejaVuSansMono.ttf");
   QFont font;
   font.setFamily("DejaVu Sans Mono");
