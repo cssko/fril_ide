@@ -16,6 +16,8 @@ void EditorTabManager::closeTab(int tabID){
 }
 
 void EditorTabManager::newTab(QString fileName, QString fileText){
+    //TODO: Check for duplicate tabs
+
     // Create new editor
     newEditor();
 
