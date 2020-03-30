@@ -2,6 +2,7 @@
 
 EditorTabManager::EditorTabManager(QWidget *parent) : QTabWidget(parent) {
     this->setTabsClosable(true);
+    this->setMovable(true);
     connect(this, SIGNAL(tabCloseRequested(int)), this, SLOT(closeTab(int)));
 }
 
@@ -19,10 +20,12 @@ void EditorTabManager::newTab(QString fileName, QString fileText){
     newEditor();
 
     // Add a tab with that editor
-    this->addTab(this->editor, tr(fileName.toStdString().c_str()));
+    int tabID = this->addTab(this->editor, tr(fileName.toStdString().c_str()));
+    this->setCurrentIndex(tabID);
 
     // Set editor text to that of its corresponding file
     editor->setPlainText(fileText);
+
 }
 
 // Set up a new editor
