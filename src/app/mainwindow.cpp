@@ -21,8 +21,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
       QGuiApplication::primaryScreen()->availableGeometry()));
   this->setupFileMenu();
   this->setupHelpMenu();
-  this->setupEditor();
-  this->setCentralWidget(this->editor);
+  this->setupEditorTabManager();
+  this->setCentralWidget(this->editorTabManager);
   this->setWindowTitle(tr("BeautiFRIL"));
   this->setupDockWidgets();
 }
@@ -33,7 +33,17 @@ void MainWindow::about() {
                         "of Mankinds hubris. </p>"));
 }
 
-void MainWindow::newFile() { editor->clear(); }
+void MainWindow::newFile() {
+    //TODO: Add support for creating multiple new files
+    // Get current directory
+    // QFileSystemModel* model = qobject_cast<QFileSystemModel *>(fileTreeView->model());
+    // QDir dir = model->rootDirectory();
+    QString path("NewFile.frl");
+    QFile file(path);
+    file.open(QFile::WriteOnly | QFile::Text);
+    file.close();
+    editorTabManager->newTab(path, "");
+}
 
 void MainWindow::openFile(const QString &path) {
   QString fileName = path;
@@ -43,29 +53,15 @@ void MainWindow::openFile(const QString &path) {
   if (!fileName.isEmpty()) {
     QFile file(fileName);
     if (file.open(QFile::ReadOnly | QFile::Text))
-      editor->setPlainText(file.readAll());
+      editorTabManager->newTab(fileName, file.readAll());
   }
 }
 
-void MainWindow::setupEditor() {
-  QFontDatabase::addApplicationFont(":/resources/fonts/DejaVuSansMono.ttf");
-  QFont font;
-  font.setFamily("DejaVu Sans Mono");
-  font.setFixedPitch(true);
-  font.setPointSize(14);
-
-  editor = new Editor;
-  completer = new QCompleter(this);
-  completer->setModel(this->modelFromFile(":/resources/bip_list.txt"));
-  completer->setModelSorting(QCompleter::CaseInsensitivelySortedModel);
-  completer->setCaseSensitivity(Qt::CaseInsensitive);
-  completer->setWrapAround(false);
-  editor->setCompleter(completer); //  editor->setAcceptRichText(false);
-  editor->setFont(font);
-  editor->setStyleSheet(
-      "QTextEdit { background-color: #333333; color: white; }");
-  editor->setTabStopDistance(20); // half size
-  highlighter = new Highlighter(editor->document());
+void::MainWindow::setupEditorTabManager() {
+    //Create a default new file
+    // Add tab for default file
+    editorTabManager = new EditorTabManager();
+    newFile();
 }
 
 void MainWindow::setupDockWidgets() {
@@ -141,29 +137,6 @@ void MainWindow::setupHelpMenu() {
 
   helpMenu->addAction(tr("&About"), this, &MainWindow::about);
   helpMenu->addAction(tr("About &Qt"), qApp, &QApplication::aboutQt);
-}
-
-QAbstractItemModel *MainWindow::modelFromFile(const QString &fileName) {
-  QFile file(fileName);
-  if (!file.open(QFile::ReadOnly)) {
-    qInfo("readonly");
-    return new QStringListModel(completer);
-  }
-#ifndef QT_NO_CURSOR
-  QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
-#endif
-  QStringList words;
-
-  while (!file.atEnd()) {
-    QByteArray line = file.readLine();
-    if (!line.isEmpty())
-      words << QString::fromUtf8(line.trimmed());
-  }
-
-#ifndef QT_NO_CURSOR
-  QGuiApplication::restoreOverrideCursor();
-#endif
-  return new QStringListModel(words, completer);
 }
 
 MainWindow::~MainWindow() {}

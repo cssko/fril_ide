@@ -1,8 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "editor.h"
-#include "highlighter.h"
+#include "editortabmanager.h"
 #include <QListWidget>
 #include <QMainWindow>
 #include <QStackedLayout>
@@ -26,18 +25,13 @@ public slots:
 private:
   QListWidget prefList;
   QStackedLayout prefLayout;
-  // Not sure if we want to do the editor business here, as we may end up
-  // having tabbed editors
-  void setupEditor();
+  void setupEditorTabManager();
   void setupDockWidgets();
   void setupFileMenu();
   void setupHelpMenu();
   void setupToolBar();
-  QAbstractItemModel *modelFromFile(const QString &fileName);
 
-  QCompleter *completer = nullptr;
-  Editor *editor;
-  Highlighter *highlighter;
+  EditorTabManager *editorTabManager;
   QMenu *mainWindowMenu;
   QTreeView *fileTreeView;
 };
