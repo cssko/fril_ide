@@ -1,15 +1,26 @@
 #include "editor.h"
 
-#include <QAbstractItemModel>
-#include <QAbstractItemView>
-#include <QApplication>
-#include <QCompleter>
-#include <QKeyEvent>
-#include <QModelIndex>
-#include <QScrollBar>
-#include <QtDebug>
+Editor::Editor(QWidget *parent) : QTextEdit(parent) {
+    // Initialize a new editor
+    QFontDatabase::addApplicationFont(":/resources/fonts/DejaVuSansMono.ttf");
+    QFont font;
+    font.setFamily("DejaVu Sans Mono");
+    font.setFixedPitch(true);
+    font.setPointSize(14);
 
-Editor::Editor(QWidget *parent) : QTextEdit(parent) {}
+    completer = new QCompleter(this);
+    completer->setModel(this->modelFromFile(":/resources/bip_list.txt"));
+    completer->setModelSorting(QCompleter::CaseInsensitivelySortedModel);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    completer->setWrapAround(false);
+
+    this->setCompleter(completer); //  editor->setAcceptRichText(false);
+    this->setFont(font);
+    this->setStyleSheet(
+        "QTextEdit { background-color: #333333; color: white; }");
+    this->setTabStopDistance(20); // half size
+    highlighter = new Highlighter(this->document());
+}
 Editor::~Editor(){};
 
 void Editor::setCompleter(QCompleter *completer) {
@@ -28,8 +39,6 @@ void Editor::setCompleter(QCompleter *completer) {
   QObject::connect(c, QOverload<const QString &>::of(&QCompleter::activated),
                    this, &Editor::insertCompletion);
 }
-
-QCompleter *Editor::completer() const { return c; }
 
 void Editor::insertCompletion(const QString &completion) {
   if (c->widget() != this)
@@ -101,4 +110,27 @@ void Editor::keyPressEvent(QKeyEvent *e) {
   cr.setWidth(c->popup()->sizeHintForColumn(0) +
               c->popup()->verticalScrollBar()->sizeHint().width());
   c->complete(cr);
+}
+
+QAbstractItemModel *Editor::modelFromFile(const QString &fileName) {
+  QFile file(fileName);
+  if (!file.open(QFile::ReadOnly)) {
+    qInfo("readonly");
+    return new QStringListModel(completer);
+  }
+#ifndef QT_NO_CURSOR
+  QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
+#endif
+  QStringList words;
+
+  while (!file.atEnd()) {
+    QByteArray line = file.readLine();
+    if (!line.isEmpty())
+      words << QString::fromUtf8(line.trimmed());
+  }
+
+#ifndef QT_NO_CURSOR
+  QGuiApplication::restoreOverrideCursor();
+#endif
+  return new QStringListModel(words, completer);
 }

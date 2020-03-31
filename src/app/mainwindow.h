@@ -1,8 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "editor.h"
-#include "highlighter.h"
 #include "editortabmanager.h"
 #include <QListWidget>
 #include <QMainWindow>
@@ -32,11 +30,8 @@ private:
   void setupFileMenu();
   void setupHelpMenu();
   void setupToolBar();
-  QAbstractItemModel *modelFromFile(const QString &fileName);
 
-  QCompleter *completer = nullptr;
   EditorTabManager *editorTabManager;
-  Highlighter *highlighter;
   QMenu *mainWindowMenu;
   QTreeView *fileTreeView;
 };

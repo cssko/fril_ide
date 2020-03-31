@@ -139,27 +139,4 @@ void MainWindow::setupHelpMenu() {
   helpMenu->addAction(tr("About &Qt"), qApp, &QApplication::aboutQt);
 }
 
-QAbstractItemModel *MainWindow::modelFromFile(const QString &fileName) {
-  QFile file(fileName);
-  if (!file.open(QFile::ReadOnly)) {
-    qInfo("readonly");
-    return new QStringListModel(completer);
-  }
-#ifndef QT_NO_CURSOR
-  QGuiApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
-#endif
-  QStringList words;
-
-  while (!file.atEnd()) {
-    QByteArray line = file.readLine();
-    if (!line.isEmpty())
-      words << QString::fromUtf8(line.trimmed());
-  }
-
-#ifndef QT_NO_CURSOR
-  QGuiApplication::restoreOverrideCursor();
-#endif
-  return new QStringListModel(words, completer);
-}
-
 MainWindow::~MainWindow() {}

@@ -15,14 +15,10 @@ public:
 
 public slots:
   void newTab(QString fileName, QString fileText);
-  void newEditor();
   void closeTab(int tabID);
 
 private:
   Editor *editor;
-  QCompleter *completer = nullptr;
-  Highlighter *highlighter;
-
 };
 
 #endif // EDITORTABMANAGER_H
