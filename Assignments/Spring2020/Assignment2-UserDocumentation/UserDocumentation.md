@@ -26,7 +26,7 @@ some text
 ## Text Editor
 some text
 
-<a name="syntaxhighlightingr"></a>
+<a name="syntaxhighlighting"></a>
 ## Syntax Highlighting
 some text
 
