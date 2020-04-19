@@ -1,7 +1,7 @@
-##User Documentation
+# User Documentation
 ----
 
-##Table of Contents
+### Table of Contents
 
 - [Download the IDE](#download)
 - Features
