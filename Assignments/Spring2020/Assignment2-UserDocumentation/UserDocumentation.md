@@ -3,6 +3,8 @@
 
 ###Table of Contents
 
+#[Text Editor] (editor)
+
 - [Download the IDE] (#download)
 - Features
     - [Text Editor] (editor)
