@@ -4,30 +4,19 @@
 ###Table of Contents
 
 - [Download the IDE](#download)
-2. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
-
-## This is how to Download the IDE <a name="download"></a>
-Some text
-
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text
-
-- [Download the IDE] (#download)
 - Features
-    - [Text Editor] (editor)
-    - [Syntax Highlighting] (syntax-highlighting)
-    - [Folder View] (folder-view)
-    - [Console (under development)] (console)
-    - [Run FRIL interpreter session] (interpreter)
-    - [Load FRIL files] (#loadFril)
-    - [Settings] (#settings)
-        - [Help] (help)
-        - [Color Theme] (color-theme)
-- [Documentation] (documentation)
-- [FRIL Manual] (fril-manual)
-- [FAQs] (#faqs)
+    - [Text Editor](#editor)
+    - [Syntax Highlighting](#syntaxhighlighting)
+    - [Folder View](#folderview)
+    - [Console (under development)](#console)
+    - [Run FRIL interpreter session](#interpreter)
+    - [Load FRIL files](#loadFril)
+    - [Settings](#settings)
+    - [Help](#help)
+    - [Color Theme](#colortheme)
+ - [Documentation](#documentation)
+ - [FRIL Manual](#frilmanual)
+ - [FAQs](#faqs)
 
 <a name="download"></a>
 ## Download the IDE
@@ -37,12 +26,16 @@ some text
 ## Text Editor
 some text
 
-<a name="folder-view"></a>
+<a name="syntaxhighlightingr"></a>
+## Syntax Highlighting
+some text
+
+<a name="folderview"></a>
 ## Folder View
 some text
 
 <a name="console"></a>
-## Fril Console
+## Console (under development)
 some text
 
 <a name="interpreter"></a>
@@ -55,4 +48,28 @@ some text
 
 <a name="settings"></a>
 ## Settings
+some text
+
+<a name="help"></a>
+## Help
+some text
+
+<a name="documentation"></a>
+## Documentation
+some text
+
+<a name="documentation"></a>
+## Documentation
+some text
+
+<a name="colortheme"></a>
+## Color Theme
+some text
+
+<a name="frilmanual"></a>
+## Fril Manual
+some text
+
+<a name="faqs"></a>
+## FAQs
 some text
