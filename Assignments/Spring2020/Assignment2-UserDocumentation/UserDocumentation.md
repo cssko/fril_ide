@@ -5,17 +5,17 @@
 
 - [Download the IDE] (#download)
 - Features
-    - [Text Editor] (#editor)
-    - [Syntax Highlighting] (#syntax-highlighting)
-    - [Folder View] (#folder-view)
-    - [Console (under development)] (#console)
-    - [Run FRIL interpreter session] (#interpreter)
+    - [Text Editor] (editor)
+    - [Syntax Highlighting] (syntax-highlighting)
+    - [Folder View] (folder-view)
+    - [Console (under development)] (console)
+    - [Run FRIL interpreter session] (interpreter)
     - [Load FRIL files] (#loadFril)
     - [Settings] (#settings)
-        - [Help] (#help)
-        - [Color Theme] (#color-theme)
-- [Documentation] (#documentation)
-- [FRIL Manual] (#fril-manual)
+        - [Help] (help)
+        - [Color Theme] (color-theme)
+- [Documentation] (documentation)
+- [FRIL Manual] (fril-manual)
 - [FAQs] (#faqs)
 
 <a name="download"></a>
