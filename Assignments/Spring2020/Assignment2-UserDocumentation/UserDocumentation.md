@@ -9,8 +9,8 @@
     - [Syntax Highlighting](#syntaxhighlighting)
     - [Folder View](#folderview)
     - [Console (under development)](#console)
-    - [Settings](#settings)
-    - [Help](#help)
+    - [Settings (under development)](#settings)
+    - [Help (under development)](#help)
  - [FAQs](#faqs)
 
 <a name="download"></a>
@@ -47,15 +47,15 @@ The help feature will help with providing Fril resources and documentation.This 
 <a name="faqs"></a>
 ## FAQs
 **How to Develop Features**
-[Readme](README.md)
-[QtWidget](https://doc.qt.io/qt-5/qwidget.html)
-Qt Examples and Tutorials. (Check Examples section in QtCreator). 
+    * [Readme](README.md)
+    * [QtWidget](https://doc.qt.io/qt-5/qwidget.html)
+    * Qt Examples and Tutorials. (Check Examples section in QtCreator). 
 **Fril Documentation**
-* [Learning Fril](https://docs.google.com/document/d/1G7tiSEn1rRSrj6Cf00uEVAQQzQzWx3WuMtbuo-iehC0/edit#heading=h.yztcc7hv7e6u)
-* [FRIL Course Material](https://eecs.ceas.uc.edu/~aralescu/323Fall2005/LECTURES/Fril_index.html)
-*  [FRIL Tutorial by Nick Sorrell](https://sorrell.github.io/files/Fril.pdf)
-* [Applications of Logic Programming in Software Engineering](https://pdfs.semanticscholar.org/66df/f3f769195dcc90b95d8556eb445ad76665bb.pdf)
-* [FRIL Syntax Highlighting XML by Garrett Scholtes](https://gist.github.com/scholtes/dd2680ce9dd10907e32a02f6d8b94cb2)
+    * [Learning Fril](https://docs.google.com/document/d/1G7tiSEn1rRSrj6Cf00uEVAQQzQzWx3WuMtbuo-iehC0/edit#heading=h.yztcc7hv7e6u)
+    * [FRIL Course Material](https://eecs.ceas.uc.edu/~aralescu/323Fall2005/LECTURES/Fril_index.html)
+    *  [FRIL Tutorial by Nick Sorrell](https://sorrell.github.io/files/Fril.pdf)
+    * [Applications of Logic Programming in Software Engineering](https://pdfs.semanticscholar.org/66df/f3f769195dcc90b95d8556eb445ad76665bb.pdf)
+    * [FRIL Syntax Highlighting XML by Garrett Scholtes](https://gist.github.com/scholtes/dd2680ce9dd10907e32a02f6d8b94cb2)
 
 
 
