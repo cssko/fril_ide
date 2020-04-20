@@ -4,11 +4,15 @@ Logic programming is a paradigm for expressing and using formal logic. It is use
 
 ## [User Interface Specification](https://github.com/cssko/fril_ide/blob/Sem2Assignments/Assignments/Fall2019/Assignment4-DesignDiagrams/Assignment4-DesignDiagrams.md)
 
+
 [UI Design](https://github.com/cssko/fril_ide/blob/Sem2Assignments/Assignments/Spring2020/Assignment7-FinalDesignReport/images/UI_Diagram.jpg)
 
 ## [Test Plan and Results](https://github.com/cssko/fril_ide/blob/Sem2Assignments/Assignments/Spring2020/Assignment1-TestingPlan/TestingPlan.md)
 
 ## [User Manual](https://github.com/cssko/fril_ide/tree/Sem2Assignments/Assignments/Spring2020/Assignment2-UserDocumentation)
+
+![User Manual Images](images\CodeEditor2.JPG)
+
 
 ## [Spring Final PPT Presentation](https://docs.google.com/presentation/d/1iJhzB7ImjfKxby1IJDtcmeyAMRX-BxNlE_JhbUarN6Y/edit?usp=sharing)
 
