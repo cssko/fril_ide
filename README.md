@@ -14,7 +14,9 @@ FRIL (Fuzzy Relational Inference Language) is a logic programming language from 
 ### Advisor
 * Dr Anca Ralescu (ralescal@ucmail.uc.edu)
 
-## [Final Design Report](Assignments/FinalDesignReport.md)
+## [Final Design Report (Fall)](Assignments/Fall2019/FinalDesignReport.md)
+
+## [Final Design Report (Spring)](Assignments/Spring2020/Assignment7-FinalDesignReport/FinalDesignReport.md)
 
 ## Project Status
 Work in progress. 
