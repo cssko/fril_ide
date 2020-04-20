@@ -137,8 +137,8 @@ S.3.9 Integrated<br/>
 |----------------|--------------------------|--------------------|------------------------|-----------------|
 | Text Editor    |                          |                    |                        |                 |
 | TE.1           | Normal                   | Whitebox           | Functional             | Unit            |
-| TE.1           | Normal                   | Whitebox           | Functional             | Unit            |
-| TE.1           | Boundary                 | Whitebox           | Functional             | Unit            |
+| TE.2           | Normal                   | Whitebox           | Functional             | Unit            |
+| TE.3           | Boundary                 | Whitebox           | Functional             | Unit            |
 |                |                          |                    |                        |                 |
 | File Directory |                          |                    |                        |                 |
 | FD.1           | Normal                   | Blackbox           | Functional             | Unit            |
@@ -154,3 +154,27 @@ S.3.9 Integrated<br/>
 | S.1            | Normal                   | Blackbox           | Functional             | Integrated      |
 | S.2            | Normal                   | Blackbox           | Functional             | Integrated      |
 | S.3            | Normal                   | Whitebox           | Performance            | Integrated      |
+
+
+## Results
+| Test ID        | Normal/Boundary/Abnormal | Blackbox/White box | Functional/Performance | Unit/Integrated | Results |
+|----------------|--------------------------|--------------------|------------------------|-----------------|---------|
+| Text Editor    |                          |                    |                        |                 |         |
+| TE.1           | Normal                   | Whitebox           | Functional             | Unit            | Pass    |
+| TE.2           | Normal                   | Whitebox           | Functional             | Unit            | Pass    |
+| TE.3           | Boundary                 | Whitebox           | Functional             | Unit            | Pass    |
+|                |                          |                    |                        |                 |         |
+| File Directory |                          |                    |                        |                 |         |
+| FD.1           | Normal                   | Blackbox           | Functional             | Unit            | Pass    |
+| FD.2           | Normal                   | Blackbox           | Functional             | Unit            | Pass    |
+| FD.3           | Normal                   | Blackbox           | Performance            | Unit            | <0.1 s  |
+|                |                          |                    |                        |                 |         |
+| Console        |                          |                    |                        |                 |         |
+| C.1            | Abnormal                 | Whitebox           | Functional             | Unit            | N/A     |
+| C.2            | Normal                   | Blackbox           | Functional             | Unit            | N/A     |
+| C.3            | Normal                   | Whitebox           | Performance            | Unit            | N/A     |
+|                |                          |                    |                        |                 |         |
+| Settings       |                          |                    |                        |                 |         |
+| S.1            | Normal                   | Blackbox           | Functional             | Integrated      | N/A     |
+| S.2            | Normal                   | Blackbox           | Functional             | Integrated      | N/A     |
+| S.3            | Normal                   | Whitebox           | Performance            | Integrated      | N/A     |
