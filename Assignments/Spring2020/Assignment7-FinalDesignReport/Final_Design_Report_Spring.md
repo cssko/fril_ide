@@ -24,7 +24,7 @@ Logic programming is a paradigm for expressing and using formal logic. It is use
 ### Final Self-Assessments (Spring)
 #### [Saylee Dharne](https://github.com/cssko/fril_ide/blob/Sem2Assignments/Assignments/Spring2020/Assignment6-SelfAssessment/SelfAssessment_SayleeDharne.md)
 #### [Vaishnavi Raghavaraju](https://github.com/cssko/fril_ide/blob/Sem2Assignments/Assignments/Spring2020/Assignment6-SelfAssessment/Self_Reflection_Essay_Vaishnavi.md)
-#### [Chris Kothman]()
+#### [Chris Kothman](https://github.com/cssko/fril_ide/blob/Sem2Assignments/Assignments/Spring2020/Assignment6-SelfAssessment/SelfAssessment_ChrisKothman.md)
     
 ## Summary of Hours and Justification
 
