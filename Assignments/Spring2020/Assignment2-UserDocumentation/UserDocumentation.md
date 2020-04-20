@@ -1,5 +1,4 @@
 # User Documentation
-----
 
 ### Table of Contents
 
