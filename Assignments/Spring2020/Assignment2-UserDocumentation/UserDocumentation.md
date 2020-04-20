@@ -46,10 +46,12 @@ The help feature will help with providing Fril resources and documentation.This 
 
 <a name="faqs"></a>
 ## FAQs
+
 **How to Develop Features**
     * [Readme](README.md)
     * [QtWidget](https://doc.qt.io/qt-5/qwidget.html)
     * Qt Examples and Tutorials. (Check Examples section in QtCreator). 
+    
 **Fril Documentation**
     * [Learning Fril](https://docs.google.com/document/d/1G7tiSEn1rRSrj6Cf00uEVAQQzQzWx3WuMtbuo-iehC0/edit#heading=h.yztcc7hv7e6u)
     * [FRIL Course Material](https://eecs.ceas.uc.edu/~aralescu/323Fall2005/LECTURES/Fril_index.html)
