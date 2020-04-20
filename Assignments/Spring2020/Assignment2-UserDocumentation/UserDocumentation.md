@@ -22,14 +22,19 @@ To build the project you will navigate the project directory: fril_ide/src  and 
 <a name="editor"></a>
 ## Text Editor
 Fril files can be opened and edited in the text editor. Multiple fril files can be opened using the tabbed editor feature.
+![Tabs in Text Editor](UserDocImages/CodeEditorWithTab.JPG)
+
 
 <a name="syntaxhighlighting"></a>
 ## Syntax Highlighting
 Regular expressions are used as the pattern for syntax highlighting. Fril predicates, variables, parenthesis, and other symbols make up the grammar.
+![Syntax Highlighting in Text Editor](UserDocImages/CodeEditor2.JPG)
 
 <a name="folderview"></a>
 ## Folder View
 The folder tree view lists all folders/files in the current working directory.
+![Syntax Highlighting in Text Editor](UserDocImages/TreeView2.JPG)
+
 
 <a name="console"></a>
 ## Console (under development)
